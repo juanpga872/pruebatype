@@ -15,7 +15,7 @@ export class AuthController {
       if (response.success) {
         console.log('Usuario creado exitosamente:', response.data);
         alert('Usuario creado exitosamente. Por favor, inicia sesión.');
-        window.location.href = 'login.html'; // Redirige a la vista de login
+        window.location.href = 'login.html'; 
       } else {
         throw new Error(response.message || 'Error al crear usuario');
       }
@@ -36,7 +36,7 @@ export class AuthController {
       if (response.token) {
         sessionStorage.setItem('authToken', response.token);
         console.log('Usuario autenticado:', response.data);
-        window.location.href = 'home.html'; // Redirige a la vista de inicio
+        window.location.href = 'home.html';
       } else {
         throw new Error(response.message || 'Credenciales inválidas');
       }
@@ -50,7 +50,7 @@ export class AuthController {
   // Función para manejar el cierre de sesión de los usuarios
   handleLogout(): void {
     sessionStorage.removeItem('authToken');
-    window.location.href = 'login.html'; // Redirige a la vista de login
+    window.location.href = 'login.html'; 
   }
 }
 

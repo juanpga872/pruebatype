@@ -11,7 +11,7 @@ export async function createUser(user: { email: string; password: string }) {
   return await response.json();
 }
 
-//aqui la funsion del login
+// Función para iniciar sesión y obtener un token
 export async function loginUser(user: { email: string; password: string }) {
   const response = await fetch(`${API_URL}/auth/login`, {
     method: 'POST',
