@@ -1,0 +1,159 @@
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Contenedor principal */
+#app {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado */
+header {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Formularios */
+form {
+  margin: 20px 0;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form input[type="submit"] {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Tarjetas de post */
+.post-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-card h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.post-card .post-details {
+  font-size: 14px;
+  color: #666;
+}
+
+.post-card .quality-indicator {
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.post-card .quality-indicator.green {
+  background-color: #28a745;
+}
+
+.post-card .quality-indicator.red {
+  background-color: #dc3545;
+}
+
+/* Mensajes */
+.message {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Carga */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader div {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 5px solid #007bff;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #app {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  form input,
+  form textarea,
+  form select {
+    padding: 8px;
+  }
+
+  form input[type="submit"] {
+    padding: 12px;
+  }
+}
